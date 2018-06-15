@@ -8,15 +8,15 @@ describe('SampleService tests', () => {
   })
 
   it('It should return all samples by name keyword', () => {
-    let actual = sampleService.allByName('ka')
+    let actual = sampleService.all('ka')
     expect(actual).not.toBeNull()
     expect(actual.length).toBeGreaterThan(0)
 
-    actual = sampleService.allByName('ro')
+    actual = sampleService.all('ro')
     expect(actual).not.toBeNull()
     expect(actual.length).toBeGreaterThan(0)
 
-    actual = sampleService.allByName('a')
+    actual = sampleService.all('a')
     expect(actual).not.toBeNull()
     expect(actual.length).toEqual(2)
   })

@@ -8,5 +8,6 @@ describe('Sample Entity tests', () => {
 
     actual = new Sample('kaka')
     expect(actual.name).toEqual('kaka')
+    expect(actual.id).not.toBeNull()
   })
 })

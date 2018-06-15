@@ -1,15 +1,15 @@
-# Boilerplate for REST Microservice in NodeJS
-[![Build Status](https://travis-ci.org/jsboilerplates/micro-rest.svg?branch=master)](https://travis-ci.org/jsboilerplates/micro-rest)
-[![codecov](https://codecov.io/gh/jsboilerplates/micro-rest/branch/master/graph/badge.svg)](https://codecov.io/gh/jsboilerplates/micro-rest)
-[![dependencies Status](https://david-dm.org/jsboilerplates/micro-rest/status.svg)](https://david-dm.org/jsboilerplates/micro-rest)
-[![devDependencies Status](https://david-dm.org/jsboilerplates/micro-rest/dev-status.svg)](https://david-dm.org/jsboilerplates/micro-rest?type=dev)
-[![](https://images.microbadger.com/badges/image/jsboilerplates/micro-rest.svg)](https://microbadger.com/images/jsboilerplates/micro-rest)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsboilerplates/micro-rest/blob/master/LICENSE)
+# Boilerplate for GraphQL Microservice in NodeJS
+[![Build Status](https://travis-ci.org/jsboilerplates/micro-graphql.svg?branch=master)](https://travis-ci.org/jsboilerplates/micro-graphql)
+[![codecov](https://codecov.io/gh/jsboilerplates/micro-graphql/branch/master/graph/badge.svg)](https://codecov.io/gh/jsboilerplates/micro-graphql)
+[![dependencies Status](https://david-dm.org/jsboilerplates/micro-graphql/status.svg)](https://david-dm.org/jsboilerplates/micro-graphql)
+[![devDependencies Status](https://david-dm.org/jsboilerplates/micro-graphql/dev-status.svg)](https://david-dm.org/jsboilerplates/micro-graphql?type=dev)
+[![](https://images.microbadger.com/badges/image/jsboilerplates/micro-graphql.svg)](https://microbadger.com/images/jsboilerplates/micro-graphql)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsboilerplates/micro-graphql/blob/master/LICENSE)
 
 ## Features
-- REST API with Swagger UI
+- GraphQL API with Web UI
 - Middlewares (compress, helmet, cors, favicon, body parser and static)
-- Unit Test with Jest
+- Unit Test with Jest, Logging
 - ES6, ESLint
 - CI with Travis, Docker Build
 
@@ -36,6 +36,7 @@ npm run coverage
 ``` bash
 
 # serve with hot reload at localhost:3030
+# serve GraphQL UI at localhost:3030/api
 npm start
 
 # build for production with minification
@@ -54,7 +55,7 @@ bash Dockerbuild.sh
 Run docker container
 
 ```
-docker run -d --name micro-rest -p 3030:3030 jsboilerplates/micro-rest
+docker run -d --name micro-graphql -p 3030:3030 jsboilerplates/micro-graphql
 ```
 
 ## Contributing
@@ -63,7 +64,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jsboilerplates/micro-rest/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jsboilerplates/micro-graphql/tags).
 
 ## License
 

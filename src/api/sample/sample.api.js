@@ -1,12 +1,10 @@
 import sampleService from './sample.service'
+import logger from 'winston'
 
 export default {
-  all (req, res) {
-    let body = sampleService.all()
-    res.send(body)
-  },
-  allByName (req, res) {
-    let body = sampleService.allByName(req.params.keyword)
-    res.send(body)
+  all (parent, {keyword}) {
+    logger.info('request to get all samples with keyword: %s', keyword)
+    let body = sampleService.all(keyword)
+    return body
   }
 }

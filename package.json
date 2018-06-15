@@ -1,11 +1,11 @@
 {
-  "name": "micro-rest",
+  "name": "micro-graphql",
   "description": "Boilerplate for NodeJS Microservice",
   "version": "0.0.0",
   "homepage": "",
   "main": "src",
   "license": "MIT",
-  "repository": "https://github.com/jsboilerplates/micro-rest",
+  "repository": "https://github.com/jsboilerplates/micro-graphql",
   "keywords": [
     "boiplerplate"
   ],
@@ -37,7 +37,10 @@
     "config": "^1.30.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
     "helmet": "^3.12.1",
+    "lodash": "^4.17.10",
     "serve-favicon": "^2.5.0",
     "winston": "^2.4.1"
   },

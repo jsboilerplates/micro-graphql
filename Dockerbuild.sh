@@ -1,2 +1,2 @@
-docker build -t jsboilerplates/micro-rest .
-docker tag  jsboilerplates/micro-rest jsboilerplates/micro-rest:0.0.0
+docker build -t jsboilerplates/micro-graphql .
+docker tag  jsboilerplates/micro-graphql jsboilerplates/micro-graphql:0.0.0

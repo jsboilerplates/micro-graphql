@@ -1,9 +1,24 @@
-import SampleApi from './sample/sample.api'
-import express from 'express'
+import graphqlHTTP from 'express-graphql'
+import {GraphQLSchema, GraphQLObjectType, GraphQLString, GraphQLList} from 'graphql'
+import sampleQueryType from './sample/sample.schema'
+import sampleApi from './sample/sample.api'
 
-const router = express.Router()
+const schema = new GraphQLSchema({
+  query: new GraphQLObjectType({
+    name: 'RootQueryType',
+    fields: {
+      samples: {
+        type: new GraphQLList(sampleQueryType),
+        args: {keyword: {type: GraphQLString}},
+        resolve (parent, args) {
+          return sampleApi.all(parent, args)
+        }
+      }
+    }
+  })
+})
 
-router.get('/samples', SampleApi.all)
-router.get('/samples/name/:keyword', SampleApi.allByName)
-
-export default router
+export default graphqlHTTP({
+  schema: schema,
+  graphiql: true
+})

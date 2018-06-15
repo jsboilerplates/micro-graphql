@@ -4,11 +4,11 @@ class SampleService {
   constructor () {
     this.interactor = new SampleInteractor()
   }
-  all () {
+  all (keyword) {
+    if (keyword) {
+      return this.interactor.getAllByName(keyword)
+    }
     return this.interactor.getAll()
-  }
-  allByName (keyword) {
-    return this.interactor.getAllByName(keyword)
   }
 }
 
